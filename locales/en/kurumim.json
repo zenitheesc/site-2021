@@ -34,24 +34,24 @@
             ],
             "titleParticipacao":"Looking forward to participating?",
             "detailParticipacao": [
-                "The */Public Notice for Kurumim 2022/* is now live and you can register until July 29th. Be sure to read the announcement for all the information on how to apply and more details on the development of the experiments."
+                "The */Public Notice for Kurumim 2024/* is now live. Be sure to read the announcement for all the information on how to apply and more details on the development of the experiments.",
+                "This edition, you can choose to develop and launch open experiments or satellites!"
             ]
         },
         "kurumimCard4": {
             "titleDates": "Dates",
             "text": [
-				["02/24 - Opening of pre-registrations"],
-				["04/15 - End of pre-registration"],
-				["04/22 - Deadline to suggest changes in the public notice"],
-				["06/03 - Deadline for submission of the participation report"],
-				["07/08 - Announcement of those approved"],
+
+				["04/22 - Opening of registrations"],
+				["06/10 - End of registrations"],
+				["06/30 - Deadline for submission of the experimental proposal"],
+				["07/21 - Announcement of the approved"],
 				["07/29 - End of registration period"],
-				["07/30 - Hackathon"],
-				["08/05 - Deadline for receiving the experiments"],
-				["10/08 - Aerospace Saturday"],
-				["11/11 - Deadline for submitting reports"],
-				["11/25 - Sending feedbacks"],
-				["12/09 - Submission of participation certificates"]
+				["08/07 - Deadline for filling the continuation forms"],
+				["10/12 - Deadline for submitting the Sats, partial report and data sheet"],
+				["10/26 - Aerospace Saturday"],
+				["11/30 - Deadline for submitting final reports and evalution forms"],
+				["12/31 - Submission of participation certificates and awards"]
             ],
             "linksTitle": "Useful Links",
             "linkEdital": "Participation Notice",
