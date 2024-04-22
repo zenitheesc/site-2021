@@ -62,7 +62,7 @@ function Kurumim() {
                 />
                 <picture>
                     <source media="(max-width: 768px)" srcSet="images/Kurumim/mobilePoster.webp" type="image/webp" />
-                    <img style={{ borderRadius: '0.75rem', width: '100%', margin: '0rem' }} src="../images/Kurumim/poster.webp" alt="Kurumim 2021 - Home Edition poster" />
+                    <img style={{ borderRadius: '0.75rem', width: '100%', margin: '0rem' }} src="../images/Kurumim/poster.webp" alt="Kurumim 2024 - poster" />
                 </picture>
                 <Card
                     lean="none"
@@ -82,7 +82,7 @@ function Kurumim() {
                             {TextContent.kurumimCard4.text.map((a, idx) => mapTable(a, idx))}
                             <h2 className="-homepage-section-title">{TextContent.kurumimCard4.linksTitle}</h2>
                             <div style={{display:"flex",flexDirection:"row"}}>
-                                <UnderlinedButton link={'https://docs.google.com/document/d/1JnhSNodrIYC4JB2pSTufsHXaP0Bf83JUBYWJZaYtYNI/edit?usp=sharing'} label={TextContent.kurumimCard4.linkEdital} dark/>
+                                <UnderlinedButton link={'https://github.com/zenitheesc/kurumim/blob/main/Edital_Kurumim_2024.pdf'} label={TextContent.kurumimCard4.linkEdital} dark/>
                             </div>
                         </>
                     }
