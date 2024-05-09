@@ -7,8 +7,8 @@
         "description": "Nossos projetos integram diversos campos da Engenharia no setor aeroespacial, desde o Hardware e a Estrutura até o Software."
     },
     "projetosHero": {
-        "title": "Nossos projetos",
-        "subtitle": "Integração de diversos campos da Engenharia no setor aeroespacial"
+        "title": "GARATÉA-I",
+        "subtitle": "PRIMEIRA SONDA"
     },
     "picker": ["Sondas aeroespaciais", "CubeSats", "Software", "Hardware", "Educacional"],
     "atualmente": "Atualmente",
