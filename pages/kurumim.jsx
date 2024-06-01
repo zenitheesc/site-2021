@@ -82,7 +82,7 @@ function Kurumim() {
                             {TextContent.kurumimCard4.text.map((a, idx) => mapTable(a, idx))}
                             <h2 className="-homepage-section-title">{TextContent.kurumimCard4.linksTitle}</h2>
                             <div style={{display:"flex",flexDirection:"row"}}>
-                                <UnderlinedButton link={'https://github.com/zenitheesc/kurumim/blob/main/Edital_Kurumim_2024.pdf'} label={TextContent.kurumimCard4.linkEdital} dark/>
+                                <UnderlinedButton link={'https://github.com/zenitheesc/kurumim/blob/main/Documentos/Edital_Kurumim_2024.pdf'} label={TextContent.kurumimCard4.linkEdital} dark/>
                             </div>
                         </>
                     }
