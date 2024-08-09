@@ -5,6 +5,7 @@ import HeroSection from 'components/projects-components/HeroSection';
 import ProjectTab from 'components/projects-components/ProjectTab';
 import Footer from 'components/Footer';
 import HeadTags from 'components/general/HeadTags';
+import ProjectsTabNew from 'components/projects-components/projectsv2/ProjectsTabNew';
 
 function Projetos() {
   const { t } = useTranslation();
@@ -21,7 +22,8 @@ function Projetos() {
         subtitle={subtitle}
         path={"Hero/render.webp"}
       />
-      <ProjectTab />
+      <ProjectsTabNew />
+      {/* <ProjectTab /> */}
       <Footer />
     </>
   );
