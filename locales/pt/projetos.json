@@ -12,6 +12,7 @@
     },
     "picker": ["Sondas aeroespaciais", "CubeSats", "Software", "Hardware", "Educacional"],
     "atualmente": "Atualmente",
+    "voltar": "Voltar para página de projetos",
     "sondasAeroespaciais": {
         "title": "O que são Sondas Aeroespaciais?",
         "subtitle": [

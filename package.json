@@ -50,6 +50,7 @@
   "dependencies": {
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
+    "@mui/lab": "^5.0.0-alpha.173",
     "@mui/material": "^5.16.6",
     "hamburger-react": "^2.4.0",
     "next": "^12.1.0",
@@ -73,6 +74,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.3.0"
+    "prettier": "^2.8.8"
   }
 }
