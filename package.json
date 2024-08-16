@@ -53,6 +53,7 @@
     "@mui/lab": "^5.0.0-alpha.173",
     "@mui/material": "^5.16.6",
     "hamburger-react": "^2.4.0",
+    "mui-image": "^1.0.7",
     "next": "^12.1.0",
     "next-seo": "^4.24.0",
     "next-translate": "^1.0.6",
