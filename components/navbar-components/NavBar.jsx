@@ -2,10 +2,16 @@ import React, { useState, useEffect } from 'react';
 import NavHeader from './NavHeader';
 import NavMenu from './NavMenu';
 import style from 'styles/NavBar.module.css';
+import { Button } from '@mui/material';
+import useTranslation from 'next-translate/useTranslation';
 
 function NavBar(props) {
   const [menu, setMenuState] = useState(false);
   const [scrollDir, setScrollDir] = useState('top');
+
+  const { t } = useTranslation();
+  const projectPageLabel = t('common:navigation.backToProjects');
+  const projectPageHref = t('common:navigation.projectsPageLink');
 
   const toggleMenu = (open) => {
     setMenuState(open);
@@ -74,7 +80,20 @@ function NavBar(props) {
         toggleMenu={toggleMenu}
         isMenuOpen={menu}
       />
+
       <NavMenu isMenuOpen={menu} />
+
+      {props.isProjectSubpage && (
+        <Button
+          variant="contained"
+          color="primary"
+          className={style.fixedButton}
+          href={projectPageHref}
+        >
+          {projectPageLabel}
+        </Button>
+      )}
+
     </div>
   );
 }

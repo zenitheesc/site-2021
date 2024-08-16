@@ -135,6 +135,21 @@
 
 }
 
+.fixedButton {
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    z-index: 101;
+    transform: translateY(+50%);
+    background-color: #F28705;
+
+}
+
+.fixedButton:hover {
+    background-color: #0193ED; 
+    /*color: #000000;*/
+}
+
 @media screen and (min-width: 768px) {
     .navBarHeaderContainer {
         padding-left: 2em;
