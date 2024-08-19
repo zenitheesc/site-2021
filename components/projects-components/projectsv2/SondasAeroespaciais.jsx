@@ -1,6 +1,17 @@
-import React, { useState } from 'react';
-import { Box, Button, CardMedia, Paper, Typography } from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2';
+import React from 'react';
+import {
+    Box,
+    Typography,
+    Paper,
+    Grid,
+    useMediaQuery,
+    useTheme,
+    List,
+    ListItem,
+    Divider,
+    Card,
+    CardMedia,
+} from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem, { timelineItemClasses } from '@mui/lab/TimelineItem';
@@ -9,177 +20,282 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import { Image } from 'mui-image';
+import MemoryIcon from '@mui/icons-material/Memory';
+import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
+import BiotechIcon from '@mui/icons-material/Biotech';
 
 export default function SondasAeroespaciais() {
-    // precisa colocar a navbar aqui
     const { t } = useTranslation();
     const projetos = t('projetos:sondasAeroespaciais', {}, { returnObjects: true });
-    const voltar = t('projetos:voltar', {}, { returnObjects: true });
     const garatea1 = projetos.projects.garatea1;
 
+    const zenbee = projetos.projects.zenbee;
+
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
-        <Grid container sx={{ backgroundColor: 'black' }}>
-            <Grid container sx={{ color: 'white' }}>
-                <Grid item sm={12} md={6}>
-                    <Typography variant="h2">{projetos.title}</Typography>
-                    <Typography variant="h4">{projetos.subtitle}</Typography>
-                </Grid>
+        <Grid container sx={{ backgroundColor: 'black', border: 1, borderColor: 'black', color: 'white' }}>
+            <Grid item xs={12} md={6} p={1} textAlign="center">
+                <Typography variant="h4">{projetos.title}</Typography>
+                <Typography variant="body1" sx={{ textAlign: 'justify' }}>
+                    {projetos.subtitle}
+                </Typography>
             </Grid>
 
             <Timeline
                 sx={{
-                    [`& .${timelineItemClasses.root}:before`]: {
-                        flex: 0,
-                        padding: 0,
-                        ml: -1.5,
-                    },
-                }}>
+                    [`& .${timelineItemClasses.root}:before`]: { flex: 0, padding: 0, ml: -1.5 },
+                    border: 1,
+                    borderColor: 'black',
+                    color: 'white',
+                }}
+            >
+                {/* Garatéa I */}
                 <TimelineItem>
                     <TimelineSeparator>
                         <TimelineDot sx={{ backgroundColor: '#FED329' }} />
                         <TimelineConnector sx={{ backgroundColor: '#F28705' }} />
                     </TimelineSeparator>
-                    <TimelineContent>
-                        <Grid container>
-                            <Grid container>
-                                <Grid item xs={12} sx={{ color: 'white' }}>
-                                    <Typography variant="h4">{garatea1.year}</Typography>
-                                </Grid>
+                    <TimelineContent sx={{ padding: 0 }}>
+                        <Grid container spacing={2} textAlign="center">
+                            <Grid item xs={12}>
+                                <Typography variant="h4" sx={{ textAlign: 'left' }} ml={2}>
+                                    {garatea1.year}
+                                </Typography>
+                                <Typography variant="h2">{garatea1.title}</Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Image
+                                    src="/images/Projetos/SondasAeroespaciais/Garatéa-I/photo3.webp"
+                                    alt="Imagem da sonda"
+                                    layout={isMobile ? 'fill' : 'intrinsic'}
+                                    width={isMobile ? undefined : 1080}
+                                    height={isMobile ? undefined : 1920}
+                                    fit="fill"
+                                    style={{ opacity: 'none' }}
+                                />
+                            </Grid>
 
-                                <Grid item xs={12} sm={6} md={12} sx={{ textAlign: 'center' }}>
-                                    <Typography variant="h2" sx={{ color: 'white' }}>
-                                        {garatea1.title}
+                            {/* Overview */}
+                            <Grid item container spacing={2} justifyContent="space-between">
+                                {['launchDate', 'altitude', 'award'].map((key) => (
+                                    <Grid item key={key}>
+                                        <Paper sx={{ borderRadius: '8px', p: 1 }}>
+                                            <Typography variant="subtitle2">{garatea1[key][0]}</Typography>
+                                            <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
+                                                {garatea1[key][1]}
+                                            </Typography>
+                                        </Paper>
+                                    </Grid>
+                                ))}
+                            </Grid>
+
+                            {/* Experimentos */}
+                            <Grid item xs={12}>
+                                <Paper sx={{ borderRadius: '8px', p: 2 }}>
+                                    <Typography variant="h6" p={0.5}>
+                                        {garatea1.menus[2]}
                                     </Typography>
-                                    <Typography variant="h3" sx={{ color: 'white' }}>
-                                        Primeira sonda
+                                    <Grid container alignItems="center" display="flex" flexWrap="nowrap">
+                                        <Grid item>
+                                            <BiotechIcon />
+                                        </Grid>
+
+                                        <Grid item>
+                                            <List sx={{ ml: 1 }}>
+                                                {garatea1.experiments.map((experiment, index) => (
+                                                    <ListItem key={index} padding="0" sx={{ textAlign: 'justify' }}>
+                                                        • {experiment}
+                                                    </ListItem>
+                                                ))}
+                                            </List>
+                                        </Grid>
+                                    </Grid>
+                                </Paper>
+                            </Grid>
+
+                            {/* Tecnologias */}
+                            <Grid item xs={12}>
+                                <Paper sx={{ borderRadius: '8px', p: 2 }}>
+                                    <Typography variant="h6" p={0.5}>
+                                        {garatea1.menus[1]}
                                     </Typography>
-                                </Grid>
+                                    <Grid container alignItems="center" display="flex" flexWrap="nowrap">
+                                        <Grid item>
+                                            <MemoryIcon />
+                                        </Grid>
+
+                                        <Grid item>
+                                            <List sx={{ ml: 1 }}>
+                                                {[...garatea1.embedded].map((tech, index) => (
+                                                    <ListItem key={index} padding="0" sx={{ textAlign: 'justify' }}>
+                                                        • {tech}
+                                                    </ListItem>
+                                                ))}
+                                            </List>
+                                        </Grid>
+                                    </Grid>
+                                    <Divider />
+                                    <Grid container alignItems="center" display="flex" flexWrap="nowrap" sx={{ mt: 2 }}>
+                                        <Grid item>
+                                            <DeveloperBoardIcon />
+                                        </Grid>
+                                        <Grid item>
+                                            <List sx={{ ml: 1 }}>
+                                                {[...garatea1.structure].map((tech, index) => (
+                                                    <ListItem key={index} padding="0" sx={{ textAlign: 'justify' }}>
+                                                        • {tech}
+                                                    </ListItem>
+                                                ))}
+                                            </List>
+                                        </Grid>
+                                    </Grid>
+                                </Paper>
+                            </Grid>
+
+                            <Grid item xs={12}>
+                                <Card>
+                                    <CardMedia
+                                        component="iframe"
+                                        alt="green iguana"
+                                        src="https://www.youtube.com/embed/BY_XwvKogC8?si=bedEwRraEvLAeZwg"
+                                        border="none"
+                                    />
+                                </Card>
+                            </Grid>
+                        </Grid>
+                    </TimelineContent>
+                </TimelineItem>
+
+                {/* Zenbee */}
+                <TimelineItem>
+                    <TimelineSeparator>
+                        <TimelineDot sx={{ backgroundColor: '#FED329' }} />
+                        <TimelineConnector sx={{ backgroundColor: '#F28705' }} />
+                    </TimelineSeparator>
+                    <TimelineContent sx={{ padding: 0 }}>
+                        <Grid container spacing={2} textAlign="center">
+                            <Grid item xs={12}>
+                                <Typography variant="h4" sx={{ textAlign: 'left' }} ml={2}>
+                                    {zenbee.year}
+                                </Typography>
+                                <Typography variant="h2">{zenbee.title}</Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Image
+                                    src="/images/Projetos/SondasAeroespaciais/ZenBee/photo1.webp"
+                                    alt="Imagem da sonda"
+                                    layout={isMobile ? 'fill' : 'intrinsic'}
+                                    width={isMobile ? undefined : 1080}
+                                    height={isMobile ? undefined : 1920}
+                                    fit="fill"
+                                    style={{ opacity: 'none' }}
+                                />
+                            </Grid>
+
+                            {/* Overview */}
+                            <Grid item container spacing={2} justifyContent="space-between">
+                                {['launchDate', 'altitude'].map((key) => (
+                                    <Grid item key={key}>
+                                        <Paper sx={{ borderRadius: '8px', p: 1 }}>
+                                            <Typography variant="subtitle2">{zenbee[key][0]}</Typography>
+                                            <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
+                                                {zenbee[key][1]}
+                                            </Typography>
+                                        </Paper>
+                                    </Grid>
+                                ))}
+                            </Grid>
+
+                            {/* Experimentos */}
+                            <Grid item xs={12}>
+                                <Paper sx={{ borderRadius: '8px', p: 2 }}>
+                                    <Typography variant="h6" p={0.5}>
+                                        {zenbee.menus[3]}
+                                    </Typography>
+                                    <Grid container alignItems="center" display="flex" flexWrap="nowrap">
+                                        <Grid item>
+                                            <BiotechIcon />
+                                        </Grid>
+
+                                        <Grid item>
+                                            <List sx={{ ml: 1 }}>
+                                                {zenbee.experiments.map((experiment, index) => (
+                                                    <ListItem key={index} padding="0" sx={{ textAlign: 'justify' }}>
+                                                        • {experiment}
+                                                    </ListItem>
+                                                ))}
+                                            </List>
+                                        </Grid>
+                                    </Grid>
+                                </Paper>
+                            </Grid>
+
+                            {/* Tecnologias */}
+                            <Grid item xs={12}>
+                                <Paper sx={{ borderRadius: '8px', p: 2 }}>
+                                    <Typography variant="h6" p={0.5}>
+                                        {garatea1.menus[1]}
+                                    </Typography>
+                                    <Grid container alignItems="center" display="flex" flexWrap="nowrap">
+                                        <Grid item>
+                                            <MemoryIcon />
+                                        </Grid>
+
+                                        <Grid item>
+                                            <List sx={{ ml: 1 }}>
+                                                {[...garatea1.embedded].map((tech, index) => (
+                                                    <ListItem key={index} padding="0" sx={{ textAlign: 'justify' }}>
+                                                        • {tech}
+                                                    </ListItem>
+                                                ))}
+                                            </List>
+                                        </Grid>
+                                    </Grid>
+                                    <Divider />
+                                    <Grid container alignItems="center" display="flex" flexWrap="nowrap" sx={{ mt: 2 }}>
+                                        <Grid item>
+                                            <DeveloperBoardIcon />
+                                        </Grid>
+                                        <Grid item>
+                                            <List sx={{ ml: 1 }}>
+                                                {[...garatea1.structure].map((tech, index) => (
+                                                    <ListItem key={index} padding="0" sx={{ textAlign: 'justify' }}>
+                                                        • {tech}
+                                                    </ListItem>
+                                                ))}
+                                            </List>
+                                        </Grid>
+                                    </Grid>
+                                </Paper>
+                            </Grid>
+                        </Grid>
+                    </TimelineContent>
+                </TimelineItem>
+
+                {/* Outros Anos */}
+                {['2019', '2017', '2016'].map((year, index) => (
+                    <TimelineItem key={index}>
+                        <TimelineSeparator>
+                            <TimelineDot color={index === 0 ? 'primary' : 'success'} />
+                            {index < 2 && <TimelineConnector />}
+                        </TimelineSeparator>
+                        <TimelineContent>
+                            <Typography>{year}</Typography>
+                            {year === '2019' && (
                                 <Grid item xs={12}>
                                     <Image
                                         src="/images/teste/image-44.png"
-                                        alt="Imagem da sonda"
-                                        width={'auto'}
+                                        alt="Descrição da imagem"
+                                        width={'80vw'}
                                         height={'100vh'}
                                     />
                                 </Grid>
-                            </Grid>
-
-                            <Grid container spacing={0.5}>
-                                <Grid item>
-                                    <Paper elevation={1}>
-                                        <Typography variant="h6" component="h6" p={0.5}>
-                                            {garatea1.launchDate[0]}
-                                        </Typography>
-                                        <Typography variant="h5" component="h5" p={0.5}>
-                                            {garatea1.launchDate[1]}
-                                        </Typography>
-                                    </Paper>
-                                </Grid>
-
-                                <Grid item>
-                                    <Paper elevation={1}>
-                                        <Typography variant="h6" component="h5" p={0.5}>
-                                            {garatea1.altitude[0]}
-                                        </Typography>
-                                        <Typography variant="h6" component="h6" p={0.5}>
-                                            {garatea1.altitude[1]}
-                                        </Typography>
-                                    </Paper>
-                                </Grid>
-
-                                <Grid item>
-                                    <Paper elevation={1}>
-                                        <Typography variant="h6" p={0.5}>
-                                            {garatea1.award[0]}
-                                        </Typography>
-                                        <Typography variant="h6" p={0.5}>
-                                            {garatea1.award[1]}
-                                        </Typography>
-                                    </Paper>
-                                </Grid>
-                            </Grid>
-
-                            <Grid container spacing={2}>
-                                <Paper elevation={1}>
-                                    <Typography variant="h6" p={0.5}>
-                                        {garatea1.experiments[0]}
-                                    </Typography>
-
-                                    <Typography variant="h6" p={0.5}>
-                                        {garatea1.experiments[1]}
-                                    </Typography>
-                                    <Typography variant="h6" p={0.5}>
-                                        {garatea1.experiments[2]}
-                                    </Typography>
-                                </Paper>
-                            </Grid>
-
-                            <Grid container spacing={2}>
-                                <Paper elevation={1}>
-                                    <Grid item p={1}>
-                                        <Typography variant="h6" p={0.5}>
-                                            {garatea1.menus[1]}
-                                        </Typography>
-                                        <Typography variant="h6" p={0.5}>
-                                            {garatea1.embedded[0]}
-                                        </Typography>
-                                        <Typography variant="h6" p={0.5}>
-                                            {garatea1.embedded[1]}
-                                        </Typography>
-                                        <Typography variant="h6" p={0.5}>
-                                            {garatea1.embedded[2]}
-                                        </Typography>
-                                    </Grid>
-
-                                    <Grid item p={1}>
-                                        <Typography variant="h6" p={0.5}>
-                                            {garatea1.structure[0]}
-                                        </Typography>
-                                        <Typography variant="h6" p={0.5}>
-                                            {garatea1.structure[1]}
-                                        </Typography>
-                                        <Typography variant="h6" p={0.5}>
-                                            {garatea1.structure[2]}
-                                        </Typography>
-                                    </Grid>
-                                </Paper>
-                            </Grid>
-                        </Grid>
-                    </TimelineContent>
-                </TimelineItem>
-
-                <TimelineItem>
-                    <TimelineSeparator>
-                        <TimelineDot sx={{ backgroundColor: '#FED329' }} />
-                        <TimelineConnector sx={{ backgroundColor: '#F28705' }} />
-                    </TimelineSeparator>
-                    <TimelineContent>
-                        2019
-                        <Grid item xs={12}>
-                            <Image
-                                src="/images/teste/image-44.png"
-                                alt="Descrição da imagem"
-                                width={'80vw'}
-                                height={'100vh'}
-                            />
-                        </Grid>
-                    </TimelineContent>
-                </TimelineItem>
-
-                <TimelineItem>
-                    <TimelineSeparator>
-                        <TimelineDot color="success" />
-                        <TimelineConnector />
-                    </TimelineSeparator>
-                    <TimelineContent>2017</TimelineContent>
-                </TimelineItem>
-
-                <TimelineItem>
-                    <TimelineSeparator>
-                        <TimelineDot color="success" />
-                    </TimelineSeparator>
-                    <TimelineContent>2016</TimelineContent>
-                </TimelineItem>
+                            )}
+                        </TimelineContent>
+                    </TimelineItem>
+                ))}
             </Timeline>
         </Grid>
     );
