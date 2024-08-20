@@ -62,6 +62,7 @@
     "react-countup": "^6.1.1",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
+    "react-material-ui-carousel": "^3.4.2",
     "react-player": "^2.9.0",
     "react-responsive-carousel": "^3.2.22",
     "react-rotating-text": "^1.4.1",
