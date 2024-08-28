@@ -10,6 +10,11 @@
         "title": "Nossos projetos",
         "subtitle": "Integração de diversos campos da Engenharia no setor aeroespacial"
     },
+    "projetoArray": {
+        "title": "O que fazemos?",
+        "subtitle": "Atuamos com ",
+        "array": ["Sondas Aeroespaciais", "CubeSats", "Software", "Hardware", "Educação"]
+    },
     "picker": ["Sondas aeroespaciais", "CubeSats", "Software", "Hardware", "Educacional"],
     "atualmente": "Atualmente",
     "voltar": "Voltar para página de projetos",
