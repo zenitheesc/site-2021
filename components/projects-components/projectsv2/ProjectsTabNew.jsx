@@ -11,12 +11,12 @@ export default function ProjectsTabNew () {
             <Grid sm={12} md={6} p={2}>
                 <Card sx={{border: 1, borderColor: "orange", backgroundColor: "black"}}>
                 <CardMedia
-                    sx={{ height: 140 }}
+                    sx={{ height: 340 }}
                     image="/images/Projetos/SondasAeroespaciais/Garatéa-II/photo4.webp"
                     title="green iguana"
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div" color="white">
+                    <Typography gutterBottom variant="h4" component="div" color="white" sx={{ textAlign: "center" }}>
                         Sondas aeroespaciais
                     </Typography>
                     <Typography variant="body2" color="white">
@@ -24,8 +24,18 @@ export default function ProjectsTabNew () {
                         species, ranging across all continents except Antarctica
                     </Typography>
                 </CardContent>
-                    <CardActions>
-                        <Button size="small" color="primary" href='/projetos/sondas-aeroespaciais'>
+                    <CardActions sx={{ display: 'flex', justifyContent: 'center' }}>
+                            <Button 
+                                size="large" 
+                                sx={{ 
+                                    backgroundColor: 'white', 
+                                    color: 'black', 
+                                    borderRadius: 2, 
+                                    padding: '8px 16px', 
+                                    '&:hover': { backgroundColor: 'darkgray' }, 
+                                }} 
+                                href='/projetos/sondas-aeroespaciais'
+                            >
                             Saiba mais
                         </Button>
                     </CardActions>
@@ -35,12 +45,12 @@ export default function ProjectsTabNew () {
             <Grid sm={12} md={6} p={2}>
                 <Card sx={{border: 1, borderColor: "orange", backgroundColor: "black"}}>
                 <CardMedia
-                    sx={{ height: 140 }}
-                    image="/images/Projetos/SondasAeroespaciais/Garatéa-II/photo4.webp"
+                    sx={{ height: 340 }}
+                    image="/images/Projetos/SondasAeroespaciais/Garatéa-II/photo2.webp"
                     title="green iguana"
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div" color="white">
+                    <Typography gutterBottom variant="h4" component="div" color="white" sx={{ textAlign: "center" }}>
                         CubeSats
                     </Typography>
                     <Typography variant="body2" color="white">
@@ -48,8 +58,18 @@ export default function ProjectsTabNew () {
                         species, ranging across all continents except Antarctica
                     </Typography>
                 </CardContent>
-                    <CardActions>
-                        <Button size="small" color="primary" href='/projetos/cubesats'>
+                    <CardActions sx={{ display: 'flex', justifyContent: 'center' }}>
+                            <Button 
+                                size="large" 
+                                sx={{ 
+                                    backgroundColor: 'white', 
+                                    color: 'black', 
+                                    borderRadius: 2, 
+                                    padding: '8px 16px', 
+                                    '&:hover': { backgroundColor: 'darkgray' }, 
+                                }} 
+                                href='/projetos/cubesats'
+                            >
                             Saiba mais
                         </Button>
                     </CardActions>
@@ -59,12 +79,12 @@ export default function ProjectsTabNew () {
             <Grid sm={12} md={6} p={2}>
                 <Card sx={{border: 1, borderColor: "orange", backgroundColor: "black"}}>
                 <CardMedia
-                    sx={{ height: 140 }}
-                    image="/images/Projetos/SondasAeroespaciais/Garatéa-II/photo4.webp"
+                    sx={{ height: 340 }}
+                    image="/images/Projetos/Software/ZenithMonitor.webp"
                     title="green iguana"
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div" color="white">
+                    <Typography gutterBottom variant="h4" component="div" color="white" sx={{ textAlign: "center" }}>
                         Software
                     </Typography>
                     <Typography variant="body2" color="white">
@@ -72,8 +92,18 @@ export default function ProjectsTabNew () {
                         species, ranging across all continents except Antarctica
                     </Typography>
                 </CardContent>
-                    <CardActions>
-                        <Button size="small" color="primary" href='/projetos/software'>
+                    <CardActions sx={{ display: 'flex', justifyContent: 'center' }}>
+                            <Button 
+                                size="large" 
+                                sx={{ 
+                                    backgroundColor: 'white', 
+                                    color: 'black', 
+                                    borderRadius: 2, 
+                                    padding: '8px 16px', 
+                                    '&:hover': { backgroundColor: 'darkgray' }, 
+                                }} 
+                                href='/projetos/software'
+                            >
                             Saiba mais
                         </Button>
                     </CardActions>
@@ -83,12 +113,12 @@ export default function ProjectsTabNew () {
             <Grid sm={12} md={6} p={2}>
                 <Card sx={{border: 1, borderColor: "orange", backgroundColor: "black"}}>
                 <CardMedia
-                    sx={{ height: 140 }}
-                    image="/images/Projetos/SondasAeroespaciais/Garatéa-II/photo4.webp"
+                    sx={{ height: 340 }}
+                    image="/images/Projetos/SondasAeroespaciais/Garatéa-III/photo8.webp"
                     title="green iguana"
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div" color="white">
+                    <Typography gutterBottom variant="h4" component="div" color="white" sx={{ textAlign: "center" }}>
                         Hardware
                     </Typography>
                     <Typography variant="body2" color="white">
@@ -96,8 +126,18 @@ export default function ProjectsTabNew () {
                         species, ranging across all continents except Antarctica
                     </Typography>
                 </CardContent>
-                    <CardActions>
-                        <Button size="small" color="primary" href='/projetos/hardware'>
+                    <CardActions sx={{ display: 'flex', justifyContent: 'center' }}>
+                            <Button 
+                                size="large" 
+                                sx={{ 
+                                    backgroundColor: 'white', 
+                                    color: 'black', 
+                                    borderRadius: 2, 
+                                    padding: '8px 16px', 
+                                    '&:hover': { backgroundColor: 'darkgray' }, 
+                                }} 
+                                href='/projetos/hardware'
+                            >
                             Saiba mais
                         </Button>
                     </CardActions>
@@ -107,12 +147,12 @@ export default function ProjectsTabNew () {
             <Grid sm={12} md={6} p={2}>
                 <Card sx={{border: 1, borderColor: "orange", backgroundColor: "black"}}>
                 <CardMedia
-                    sx={{ height: 140 }}
-                    image="/images/Projetos/SondasAeroespaciais/Garatéa-II/photo4.webp"
+                    sx={{ height: 340 }}
+                    image="/images/Projetos/SondasAeroespaciais/Garatéa-I/photo3.webp"
                     title="green iguana"
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div" color="white">
+                    <Typography gutterBottom variant="h4" component="div" color="white" sx={{ textAlign: "center" }}>
                         Educacional
                     </Typography>
                     <Typography variant="body2" color="white" href='/projetos/educacional'>
@@ -120,8 +160,17 @@ export default function ProjectsTabNew () {
                         species, ranging across all continents except Antarctica
                     </Typography>
                 </CardContent>
-                    <CardActions>
-                        <Button size="small" color="primary">
+                    <CardActions sx={{ display: 'flex', justifyContent: 'center' }}>
+                            <Button 
+                                size="large" 
+                                sx={{ 
+                                    backgroundColor: 'white', 
+                                    color: 'black', 
+                                    borderRadius: 2, 
+                                    padding: '8px 16px', 
+                                    '&:hover': { backgroundColor: 'darkgray' }, 
+                                }}
+                            >
                             Saiba mais
                         </Button>
                     </CardActions>
