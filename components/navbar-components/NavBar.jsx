@@ -87,7 +87,7 @@ function NavBar(props) {
         <Button
           variant="contained"
           color="primary"
-          className={style.fixedButton}
+          className={menu === true ? style.navBarContainerDeactive : style.fixedButton}
           href={projectPageHref}
         >
           {projectPageLabel}
