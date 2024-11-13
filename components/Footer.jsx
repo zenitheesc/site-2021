@@ -85,3 +85,5 @@ function Footer() {
 }
 
 export default Footer;
+
+// 13 de novembro de 2024
