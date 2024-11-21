@@ -3,6 +3,9 @@ import Software from 'components/projects-components/projects/Software/Software'
 
 export default function software() {
     return (
-        <Software />
+        //<Software />
+        <>
+        "hardware 2"
+    </>
     )
 }

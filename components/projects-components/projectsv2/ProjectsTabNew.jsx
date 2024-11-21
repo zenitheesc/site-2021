@@ -102,7 +102,7 @@ export default function ProjectsTabNew () {
                                     padding: '8px 16px', 
                                     '&:hover': { backgroundColor: 'darkgray' }, 
                                 }} 
-                                href='/projetos/software'
+                                href='/projetos'
                             >
                             Saiba mais
                         </Button>
@@ -136,7 +136,7 @@ export default function ProjectsTabNew () {
                                     padding: '8px 16px', 
                                     '&:hover': { backgroundColor: 'darkgray' }, 
                                 }} 
-                                href='/projetos/hardware'
+                                href='/projetos'
                             >
                             Saiba mais
                         </Button>

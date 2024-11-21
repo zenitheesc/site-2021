@@ -3,6 +3,9 @@ import SondasAeroespaciais from 'components/projects-components/projectsv2/Sonda
 
 export default function sondas() {
     return (
-        <SondasAeroespaciais />
+        <>
+        "hardware 3"
+        </>        
+        //<SondasAeroespaciais />
     )
 }
