@@ -6,96 +6,89 @@ import { Button } from '@mui/material';
 import useTranslation from 'next-translate/useTranslation';
 
 function NavBar(props) {
-  const [menu, setMenuState] = useState(false);
-  const [scrollDir, setScrollDir] = useState('top');
+    const [menu, setMenuState] = useState(false);
+    const [scrollDir, setScrollDir] = useState('top');
 
-  const { t } = useTranslation();
-  const projectPageLabel = t('common:navigation.backToProjects');
-  const projectPageHref = t('common:navigation.projectsPageLink');
+    const { t } = useTranslation();
+    const projectPageLabel = t('common:navigation.backToProjects');
+    const projectPageHref = t('common:navigation.projectsPageLink');
 
-  const toggleMenu = (open) => {
-    setMenuState(open);
-  };
-
-  useEffect(() => {
-    const closeMenu = () => {
-      toggleMenu(false);
+    const toggleMenu = (open) => {
+        setMenuState(open);
     };
 
-    window.addEventListener('resize', closeMenu);
+    useEffect(() => {
+        const closeMenu = () => {
+            toggleMenu(false);
+        };
 
-    return () => window.removeEventListener('resize', closeMenu);
-  }, []);
+        window.addEventListener('resize', closeMenu);
 
-  useEffect(() => {
-    toggleMenu(false);
-    const threshold = 5;
-    const topThreshHold = 90;
+        return () => window.removeEventListener('resize', closeMenu);
+    }, []);
 
-    let lastYPos = window.pageYOffset;
-    let ticking = false;
+    useEffect(() => {
+        toggleMenu(false);
+        const threshold = 5;
+        const topThreshHold = 90;
 
-    const updateScrollDir = () => {
-      const currYPos = window.pageYOffset;
+        let lastYPos = window.pageYOffset;
+        let ticking = false;
 
-      if (currYPos > topThreshHold) {
-        if (Math.abs(currYPos - lastYPos) < threshold) {
-          ticking = false;
-          return;
-        }
-        setScrollDir(currYPos > lastYPos ? 'down' : 'up');
-        lastYPos = currYPos > 0 ? currYPos : 0;
-      } else {
-        setScrollDir('top');
-      }
-      ticking = false;
-    };
+        const updateScrollDir = () => {
+            const currYPos = window.pageYOffset;
 
-    const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateScrollDir);
-        ticking = true;
-      }
-    };
+            if (currYPos > topThreshHold) {
+                if (Math.abs(currYPos - lastYPos) < threshold) {
+                    ticking = false;
+                    return;
+                }
+                setScrollDir(currYPos > lastYPos ? 'down' : 'up');
+                lastYPos = currYPos > 0 ? currYPos : 0;
+            } else {
+                setScrollDir('top');
+            }
+            ticking = false;
+        };
 
-    window.addEventListener('scroll', onScroll);
+        const onScroll = () => {
+            if (!ticking) {
+                window.requestAnimationFrame(updateScrollDir);
+                ticking = true;
+            }
+        };
 
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [scrollDir]);
+        window.addEventListener('scroll', onScroll);
 
-  return (
-    <div
-      className={
-        scrollDir === 'down'
-          ? style.navBarContainerDeactive
-          : style.navBarContainerActive
-      }>
-      <div
-        className={style.navBarContainerBackground}
-        style={{
-          backgroundColor: scrollDir === 'top' ? 'transparent' : 'black',
-        }}
-      />
-      <NavHeader
-        toggleMenu={toggleMenu}
-        isMenuOpen={menu}
-      />
+        return () => window.removeEventListener('scroll', onScroll);
+    }, [scrollDir]);
 
-      <NavMenu isMenuOpen={menu} />
+    return (
+        <div className={scrollDir === 'down' ? style.navBarContainerDeactive : style.navBarContainerActive}>
+            <div
+                className={style.navBarContainerBackground}
+                style={{
+                    backgroundColor: scrollDir === 'top' ? 'transparent' : 'black',
+                }}
+            />
+            <NavHeader toggleMenu={toggleMenu} isMenuOpen={menu} />
 
-      {props.isProjectSubpage && (
-        <Button
-          variant="contained"
-          color="primary"
-          className={menu === true ? style.navBarContainerDeactive : style.fixedButton}
-          href={projectPageHref}
-        >
-          {projectPageLabel}
-        </Button>
-      )}
+            <NavMenu isMenuOpen={menu} />
 
-    </div>
-  );
+            {props.isProjectSubpage && (
+                <Button
+                    variant="contained"
+                    color="primary"
+                    className={menu === true ? style.navBarContainerDeactive : style.fixedButton}
+                    href={projectPageHref}
+                >
+                    {projectPageLabel}
+                </Button>
+            )}
+        </div>
+    );
 }
 
 export default NavBar;
+
+// teste de preview
