@@ -7,6 +7,8 @@
 		"/kurumim"         : ["kurumim"],
 		"/processo-seletivo": ["processoSeletivo"],
 		"/projetos"        : ["projetos"],
+		"/projetos/sondas-aeroespaciais": ["projetos"],
+		"/projetos/cubesats": ["projetos"],
 		"/zenith"          : ["oZenith"]
 	}
 }

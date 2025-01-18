@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from 'styles/projects/ProjectHeroSection.module.css';
+import styles from 'styles/projects/HeroSectionV2.module.css';
 
-export default function HeroSection(props) {
+export default function HeroSectionV2(props) {
   const backgroundImage = {
     backgroundImage: `${props.backgroundImage}`,
     backgroundColor: `${props.backgroundColor}`,
@@ -11,11 +11,9 @@ export default function HeroSection(props) {
 
   return (
     <div style={backgroundImage} className={styles.heroContainer}>
+  
       <div className={styles.textContainer}>
         <h1>{props.title}</h1>
-        <h2>
-          {props.subtitle}
-        </h2>
       </div>
 
     </div>

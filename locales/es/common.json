@@ -1,5 +1,11 @@
 {
     "navBar": ["SOBRE NÓS", "PROJETOS", "KURUMIM", "PROCESSO SELETIVO", "OBSAT"],
+
+    "navigation": {
+        "backToProjects": "Back to Projects Page",
+        "projectsPageLink": "/projetos"
+    },
+    
     "footer": {
         "copyright": "© 2024  Zenith Aerospace",
         "easterEgg": "FEITO COM MUITO JAVASCRIPT E CONFUSÃO NO DISCORD"

@@ -34,14 +34,14 @@
                     "Biomolecules degradation pattern analysis"
                 ],
                 "embedded": [
-                    "*/Mbed/* based system architecture",
-                    "Usage of */commercial modules/* in environmental parameter sensing",
-                    "Usage of our own */geolocation/* system"
+                    "Mbed based system architecture",
+                    "Usage of commercial modules in environmental parameter sensing",
+                    "Usage of our own geolocation system"
                 ],
                 "structure": [
                     "Mechanism that can be activated to safely expose the experiments to the external environment",
-                    "Structure made with */3D printing/* and */glass fiber/*",
-                    "Parachute made with */Kevlar strings/* and */Nylon/*"
+                    "Structure made with 3D printing and glass fiber",
+                    "Parachute made with Kevlar strings and Nylon"
                 ]
             },
             "garatea2": {
@@ -57,15 +57,15 @@
                     "Biomolecules degradation pattern analysis"
                 ],
                 "embedded": [
-                    "*/Arduino/* based system architecture",
-                    "Usage of */commercial modules/* in environmental parameter sensing",
-                    "Usage of our own */geolocation/* system",
-                    "Usage of */solar pannels/* for battery charging"
+                    "Arduino based system architecture",
+                    "Usage of commercial modules in environmental parameter sensing",
+                    "Usage of our own geolocation system",
+                    "Usage of solar pannels for battery charging"
                 ],
                 "structure": [
-                    "Thermal insulation made with */Kapton/* and */Aeronautic Depron/*",
-                    "Structure made with */3D printing/* and */glass fiber/*",
-                    "Parachute made with */Kevlar strings/* and */Nylon/*"
+                    "Thermal insulation made with Kapton and Aeronautic Depron",
+                    "Structure made with 3D printing and glass fiber",
+                    "Parachute made with Kevlar strings and Nylon"
                 ]
             },
             "garatea3": {
@@ -82,16 +82,16 @@
                     "Culture of protozoa at different stages of life and lettuce seeds "
                 ],
                 "embedded": [
-                    "*/Data acquisition/* system developed by the group, based on ATmega328p-pu",
-                    "*/Imaging/* system based on */Linux/*",
-                    "Usage of our own */geolocation/* system",
-                    "Measuring of radiation levels with */Geiger Counter/*"
+                    "Data acquisition system developed by the group, based on ATmega328p-pu",
+                    "Imaging system based on Linux",
+                    "Usage of our own geolocation system",
+                    "Measuring of radiation levels with Geiger Counter"
                 ],
                 "structure": [
-                    "/*Hypercube/* structure, developed to */minimize impacts/*  and be completely */re-usable/*",
-                    "*/Carbon fiber/* and */3D printing/* usage",
-                    "Thermal insulation made with */Kapton/* and */Aeronautic Depron/*",
-                    "Parachute made with */Kevlar strings/* and */Nylon/*"
+                    "Hypercube structure, developed to minimize impacts  and be completely re-usable",
+                    "Carbon fiber and 3D printing usage",
+                    "Thermal insulation made with Kapton and Aeronautic Depron",
+                    "Parachute made with Kevlar strings and Nylon"
                 ]
             },
             "garatea5": {
@@ -102,15 +102,15 @@
                 "launchDate": ["LAUNCH DATE", "11/11/2018"],
                 "altitude": ["MAX ALTITUDE", "26 km"],
                 "embedded": [
-                    "*/Data acquisition/* system developed by the group, based on ATmega2560",
+                    "Data acquisition system developed by the group, based on ATmega2560",
                     "Probe's flight altitude control through a valve in the balloon",
-                    "Usage of our own */geolocation/* system"
+                    "Usage of our own geolocation system"
                 ],
                 "structure": [
-                    "Baloon and parachute */deploy mechanism/*",
-                    "*/3D printing/* usage",
-                    "Thermal insulation made with */Kapton/* and */Aeronautic Depron/*",
-                    "Parachute made with */Kevlar strings/* and */Nylon/*"
+                    "Baloon and parachute deploy mechanism",
+                    "3D printing usage",
+                    "Thermal insulation made with Kapton and Aeronautic Depron",
+                    "Parachute made with Kevlar strings and Nylon"
                 ]
             },
             "zenbee": {
@@ -125,14 +125,14 @@
                     "Provide communication between competitors at launch site and probes"
                 ],
                 "embedded": [
-                    "*/Data acquisition/* system developed by the group, based on STM32",
-                    "*/Imaging/* system based on */Linux/*",
-                    "Usage of our own */geolocation/* system"
+                    "Data acquisition system developed by the group, based on STM32",
+                    "Imaging system based on Linux",
+                    "Usage of our own geolocation system"
                 ],
                 "structure": [
-                    "*/3D printing/* usage",
-                    "Carbon fiber */Hypercube/* structure, developed to */minimize impacts/*  and be completely */re-usable/*",
-                    "Parachute made with */Kevlar strings/* and */Nylon/*"
+                    "3D printing usage",
+                    "Carbon fiber Hypercube structure, developed to minimize impacts  and be completely re-usable",
+                    "Parachute made with Kevlar strings and Nylon"
                 ]
             }
         }
@@ -141,8 +141,8 @@
         "title": "What are CubeSats?",
         "subtitle": [
             "CubeSats are nanosatellites that have reduced size and weight with a very specific format. We started developing CubeSats thanks to their reduced cost of production and launching, given that it is possible to develop CubeSats with accessible electronicsand there are generic dispensers for CubeSat launching.",
-            "A CubeSat has, generally speaking, the following subsystems: the */Structural/*, */Energetic/*, */Telecommunications/*, */Control and Attitude Determination/* and */Sensing/* subsystems and a mission module. At the moment, we've been developing missions related to */Computer Vision/*.",
-            "Although we've never launched a CubeSat, every year we bring our satellites to */CubeDesign/*, a competition hosted by INPE, where our CubeSats compete for the 1st place along with other educational satellites."    
+            "A CubeSat has, generally speaking, the following subsystems: the Structural, Energetic, Telecommunications, Control and Attitude Determination and Sensing subsystems and a mission module. At the moment, we've been developing missions related to Computer Vision.",
+            "Although we've never launched a CubeSat, every year we bring our satellites to CubeDesign, a competition hosted by INPE, where our CubeSats compete for the 1st place along with other educational satellites."    
         ],
         "projects": {
             "zenSat": {
@@ -160,13 +160,13 @@
                     "TexasInstruments"
                 ],
                 "embedded": [
-                    "System central processing based in */Linux/*",
+                    "System central processing based in Linux",
                     "Implementation of 1-axis Attitude Control",
-                    "Bidirectional telemetry with */LoRa/*",
-                    "Attitude determination implemented through */Computer Vision/*"
+                    "Bidirectional telemetry with LoRa",
+                    "Attitude determination implemented through Computer Vision"
                 ],
                 "structure": [
-                    "ZenSat is a */2U Satellite/* with its structure made with */7075iT6 alluminum alloy/* produced with */CNC machining/* and */3D printing/*, being able to support senoidal vibrations from 0-100Hz."
+                    "ZenSat is a 2U Satellite with its structure made with 7075iT6 alluminum alloy produced with CNC machining and 3D printing, being able to support senoidal vibrations from 0-100Hz."
                 ]
             },
             "uspSat": {
@@ -184,15 +184,15 @@
                     "TexasInstruments"
                 ],
                 "embedded": [
-                    "*/Distributed/* system architecture, with */redundancy/* between subsystems",
-                    "Bidirectional telemetry with */LoRa/*",
-                    "*/Imaging/* and */Attitude determination*/ in 1-axis, Linux based",
-                    "*/Active thermal control/* and */energy system management/*"
+                    "Distributed system architecture, with redundancy between subsystems",
+                    "Bidirectional telemetry with LoRa",
+                    "Imaging and Attitude determination in 1-axis, Linux based",
+                    "Active thermal control and energy system management"
                 ],
                 "structure": [
-                    "*/2U dimension/ structure, made of */7075-T6 alluminum alloy/*, anodized in black",
-                    "Usage of */carbon fiber/* plates to keep the components in place",
-                    "*/Antenna deploy/* mechanism at the ends of the extreme plates"
+                    "2U dimension/ structure, made of 7075-T6 alluminum alloy, anodized in black",
+                    "Usage of carbon fiber plates to keep the components in place",
+                    "Antenna deploy mechanism at the ends of the extreme plates"
                 ]
             }
         }
@@ -282,9 +282,9 @@
     "hardware": {
         "title": "Our hardware development",
         "subtitle": [
-            "We also dedicate ourselves to the development and manufacture of all the electronic components that are ambedded in our projects. Our team created */modular/* and */reusable/* hardware, besides integrating different subsystems at hardware-level.",
-            "We've faced some challenged while developing hardware for the aerospace environment. Beyond just applying */Electronic Engineering/* knowledge, we must also choose components that will continue operational in */hostile environments/*, whith low temperatures, low pressure and high solar radiation incidence.",
-            "Every */detail/* of our hardware is thought with care, aiming to please the group's necessities: from the mission-defined requirements to the system architecture creation."
+            "We also dedicate ourselves to the development and manufacture of all the electronic components that are ambedded in our projects. Our team created modular and reusable hardware, besides integrating different subsystems at hardware-level.",
+            "We've faced some challenged while developing hardware for the aerospace environment. Beyond just applying Electronic Engineering knowledge, we must also choose components that will continue operational in hostile environments, whith low temperatures, low pressure and high solar radiation incidence.",
+            "Every detail of our hardware is thought with care, aiming to please the group's necessities: from the mission-defined requirements to the system architecture creation."
         ],
         "projects": {
             "controladorPID": {
@@ -385,9 +385,9 @@
     "educacional": {
         "title": "Our educational projects",
         "subtitle": [
-            "O */Garatéa-E/* nasceu do desejo do Zenith de levar a ciência para */fora da universidade/* e incentivar jovens a gostarem de pesquisar e estudar. Nosso projeto educacional traz para próximo dos alunos algo que só era visto por eles nas aulas de Física e Química, o */Espaço/*.",
-            "*/Alunos do ensino fundamental e médio/* tiveram a oportunidade de desenvolver experimentos científicos, junto com os seus professores, e mandá-los para o espaço em uma de nossas sondas aeroespaciais. Isso possibilitou que os alunos pudessem analisar as mudanças em seus experimentos após a exposição ao ambiente aeroespacial, instigando a */curiosidade/* dos estudantes.",
-            "Esta iniciativa já mobilizou milhares de estudantes em todo país nas últimas edições, trazendo resultados gratificantes aos alunos, aos professores e aos pais. Agora, o Garatéa-E possui um novo nome, */Kurumim/*, mas continua com os mesmos objetivos educacionais e, agora, planeja reunir alunos de toda a América Latina!"
+            "O Garatéa-E nasceu do desejo do Zenith de levar a ciência para fora da universidade e incentivar jovens a gostarem de pesquisar e estudar. Nosso projeto educacional traz para próximo dos alunos algo que só era visto por eles nas aulas de Física e Química, o Espaço.",
+            "Alunos do ensino fundamental e médio tiveram a oportunidade de desenvolver experimentos científicos, junto com os seus professores, e mandá-los para o espaço em uma de nossas sondas aeroespaciais. Isso possibilitou que os alunos pudessem analisar as mudanças em seus experimentos após a exposição ao ambiente aeroespacial, instigando a curiosidade dos estudantes.",
+            "Esta iniciativa já mobilizou milhares de estudantes em todo país nas últimas edições, trazendo resultados gratificantes aos alunos, aos professores e aos pais. Agora, o Garatéa-E possui um novo nome, Kurumim, mas continua com os mesmos objetivos educacionais e, agora, planeja reunir alunos de toda a América Latina!"
         ],
         "projects": {
             "garateaE2017": {
